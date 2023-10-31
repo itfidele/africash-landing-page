@@ -33,7 +33,7 @@ export default function HeroContent({
   return (
     <Container maxW={"8xl"} my={{lg:24}}>
       <Flex direction={{base:"column",lg:"row"}} alignItems={{lg:"center"}} height={{lg:"70vh"}}>
-        <Flex flex={1} width={{lg:"60%"}} direction={"column"} alignItems={{base:"center",lg:"start"}} justifyItems={{lg:"start"}} p={4} gap={4}>
+        <Flex flex={1} width={{lg:"60%"}} direction={"column"} my={{base:20,lg:0}} alignItems={{base:"center",lg:"start"}} justifyItems={{lg:"start"}} p={4} gap={4}>
           <Heading
             lineHeight={1.1}
             fontWeight={600}

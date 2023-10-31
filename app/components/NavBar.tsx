@@ -34,7 +34,7 @@ function NavBar({openDrawer}:{openDrawer:Function}) {
         </Show>
 
         <Show below="md">
-            <Box onClick={triggerDrawer} cursor={"pointer"}>
+            <Box onClick={triggerDrawer} mr={6} cursor={"pointer"}>
                 <BsList size={35} />
             </Box>
         </Show>
