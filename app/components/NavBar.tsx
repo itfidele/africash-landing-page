@@ -6,8 +6,11 @@ import React from 'react'
 import {BsList} from "react-icons/bs"
 import { kPrimaryColor } from '../constant/colors';
 
-function NavBar() {
-  const { isOpen,onToggle,onClose } = useDisclosure();
+function NavBar({openDrawer}:{openDrawer:Function}) {
+  
+    const triggerDrawer=()=>{
+        openDrawer();
+    }
   return (
     <Flex alignItems={"center"} py={2} px={6} shadow={"md"}>
         <Flex grow={1}>
@@ -29,38 +32,14 @@ function NavBar() {
     
             </Flex>
         </Show>
-        
+
         <Show below="md">
-            <Box onClick={onToggle} cursor={"pointer"}>
+            <Box onClick={triggerDrawer} cursor={"pointer"}>
                 <BsList size={35} />
             </Box>
-            <Drawer isOpen={isOpen} onClose={onToggle}>
-                <DrawerOverlay/>
-                <DrawerContent height={"100vh"}>
-                    <DrawerCloseButton />
-                    <DrawerHeader>
-                        <Image alt="" height={45} src="./assets/img/logo.png"/>
-                    </DrawerHeader>
-                    <DrawerBody>
-                        <Flex gap={8} fontSize={30} direction={"column"} alignItems={""} color={"gray.800"}>
-                            <Link _hover={{color:kPrimaryColor,fontWeight:"bold"}} href="#about">About</Link>
-                            <Link _hover={{color:kPrimaryColor,fontWeight:"bold"}} href="#feature">Feature</Link>
-                            <Link _hover={{color:kPrimaryColor,fontWeight:"bold"}} href="#blog">Blog</Link>
-                            <Link _hover={{color:kPrimaryColor,fontWeight:"bold"}} href="#blog">Contact</Link>
-                            <br/>
-                            <Flex direction={"column"} gap={4}>
-                                <Button variant={"outline"} rounded={"full"}>Login</Button>
-                                <Button variant={"solid"} bg={kPrimaryColor} color={"gray.100"} rounded={"full"}>Sign up</Button>
-                            </Flex>
-                        </Flex>
-
-                    </DrawerBody>
-                    <DrawerFooter textAlign={"center"}>
-                        Copyright &copy; Africash 2023
-                    </DrawerFooter>
-                </DrawerContent>
-            </Drawer>
         </Show>
+        
+        
     </Flex>
   )
 }

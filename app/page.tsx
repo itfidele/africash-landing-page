@@ -1,9 +1,9 @@
 "use client";
-import { Box, Flex, Grid,Show, Image,Text,Link, List, ListItem, ListIcon, Card,SimpleGrid, Container } from "@chakra-ui/react"
+import { Box, Flex, Grid,Show, Image,Text,Link, List, ListItem, ListIcon, Card,SimpleGrid, Container, useDisclosure, Drawer, DrawerContent, DrawerOverlay, DrawerCloseButton, DrawerHeader, DrawerBody, DrawerFooter, Button } from "@chakra-ui/react"
 import NavBar from "./components/NavBar"
 import Hero from "./components/Hero"
 import { kPrimaryColor } from "./constant/colors";
-import { BsArrowRight,BsCheckCircle} from "react-icons/bs";
+import { BsArrowRight,BsCheckCircle, BsList} from "react-icons/bs";
 import { kFeedBacks } from "./constant/datas";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { FreeMode, Autoplay } from 'swiper/modules';
@@ -12,11 +12,39 @@ import Footer from "./components/Footer";
 import NewsLetter from "./components/NewsLetter";
 
 export default function Home() {
-
+  const { isOpen,onToggle,onClose} =useDisclosure();
   return (
     <Grid>
        {/* Navbar */}
-      <NavBar/>
+      <NavBar openDrawer={onToggle}/>
+      <Show below="md">
+            <Drawer isOpen={isOpen} onClose={onToggle}>
+                <DrawerOverlay/>
+                <DrawerContent height={"100vh"}>
+                    <DrawerCloseButton />
+                    <DrawerHeader>
+                        <Image alt="" height={45} src="./assets/img/logo.png"/>
+                    </DrawerHeader>
+                    <DrawerBody>
+                        <Flex gap={8} fontSize={30} direction={"column"} alignItems={""} color={"gray.800"}>
+                            <Link _hover={{color:kPrimaryColor,fontWeight:"bold"}} href="#about">About</Link>
+                            <Link _hover={{color:kPrimaryColor,fontWeight:"bold"}} href="#feature">Feature</Link>
+                            <Link _hover={{color:kPrimaryColor,fontWeight:"bold"}} href="#blog">Blog</Link>
+                            <Link _hover={{color:kPrimaryColor,fontWeight:"bold"}} href="#blog">Contact</Link>
+                            <br/>
+                            <Flex direction={"column"} gap={4}>
+                                <Button variant={"outline"} rounded={"full"}>Login</Button>
+                                <Button variant={"solid"} bg={kPrimaryColor} color={"gray.100"} rounded={"full"}>Sign up</Button>
+                            </Flex>
+                        </Flex>
+
+                    </DrawerBody>
+                    <DrawerFooter textAlign={"center"}>
+                        Copyright &copy; Africash 2023
+                    </DrawerFooter>
+                </DrawerContent>
+            </Drawer>
+        </Show>
        {/* Hero component */}
       <Hero heading="Africa in one financial platform"  description="Digital ecosystem designed to make Africa one.  It’s goal is to  bring the dream of financial inclusion to all people across the continent." button={{text:"Get started - it's free"}}/>
       
