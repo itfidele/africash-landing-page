@@ -36,7 +36,7 @@ function NavBar() {
             </Box>
             <Drawer isOpen={isOpen} onClose={onToggle}>
                 <DrawerOverlay/>
-                <DrawerContent>
+                <DrawerContent height={"100vh"}>
                     <DrawerCloseButton />
                     <DrawerHeader>
                         <Image alt="" height={45} src="./assets/img/logo.png"/>
