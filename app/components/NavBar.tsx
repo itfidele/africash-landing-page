@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 
 import { Box, Button, Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerFooter, DrawerHeader, DrawerOverlay, Flex,Grid,Image, Link, Show, useDisclosure } from '@chakra-ui/react'
