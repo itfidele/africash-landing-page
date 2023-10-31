@@ -17,7 +17,7 @@ import {
   Button,
 } from "@chakra-ui/react";
 import { kPrimaryColor } from "../constant/colors";
-
+import { BsDownload} from "react-icons/bs";
 export default function HeroContent({
   heading,
   description,
@@ -45,8 +45,8 @@ export default function HeroContent({
           </Heading>
           <Text color={"gray.500"}>{description}</Text>
         
-          <Button variant={"solid"} px={4} py={2} color={"gray.100"} _hover={{bg:"green.500",color:"gray.50"}} width={"fit-content"} rounded={"full"} bg={kPrimaryColor}>
-            {button.text}
+          <Button variant={"solid"} px={4} py={2} color={"gray.100"} gap={2} _hover={{bg:"green.500",color:"gray.50"}} width={"fit-content"} rounded={"full"} bg={kPrimaryColor}>
+            <BsDownload/>{button.text}
           </Button>
         </Flex>
 
