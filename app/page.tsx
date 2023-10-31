@@ -163,7 +163,7 @@ export default function Home() {
         spaceBetween={20}
         freeMode={true}
         autoplay={{
-          delay: 1000,
+          delay: 2000,
           disableOnInteraction: false,
         }}
         loop={true}
