@@ -23,10 +23,10 @@ function NewsLetter() {
             
             <Show above={"md"}>
                 <Flex flex={1} gap={2} justifyItems={"center"} justifyContent={"right"} alignItems={"center"}>
-                    <Image h={10}  alt="" src="./assets/img/insta-img.png" />
-                    <Image h={10}  alt="" src="./assets/img/facebook-img.png" />
-                    <Image h={10}  alt="" src="./assets/img/linkedin-img.png" />
-                    <Image h={10}  alt="" src="./assets/img/insta-img.png" />
+                    <Image h={10} _hover={{cursor:"pointer"}}  alt="" src="./assets/img/insta-img.png" />
+                    <Image h={10} _hover={{cursor:"pointer"}}   alt="" src="./assets/img/facebook-img.png" />
+                    <Image h={10} _hover={{cursor:"pointer"}}   alt="" src="./assets/img/linkedin-img.png" />
+                    <Image h={10} _hover={{cursor:"pointer"}}   alt="" src="./assets/img/insta-img.png" />
                 </Flex>
             </Show>
         </Flex>
