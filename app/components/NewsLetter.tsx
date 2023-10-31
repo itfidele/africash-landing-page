@@ -8,7 +8,7 @@ import { kPrimaryColor } from '../constant/colors';
 function NewsLetter() {
   return <Container maxW={"6xl"}>
         <Image alt='' src='./assets/img/green-app.png'/>
-        <Box fontSize={30} py={6}>Keep up with us by signing up for our newsletter</Box>
+        <Box fontSize={30} py={6} fontWeight={"bold"}>Keep up with us by signing up for our newsletter</Box>
         <Flex py={8} alignItems={"center"}>
             <Flex>
                 <InputGroup size='md'>
