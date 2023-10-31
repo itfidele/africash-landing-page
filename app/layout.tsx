@@ -18,6 +18,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="./assets/css/clash-display.css" />
         <link rel="stylesheet" href="./assets/css/main.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon" href="./favicon.ico" />
       </head>
       <body>
         <Providers>

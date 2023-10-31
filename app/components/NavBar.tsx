@@ -18,7 +18,7 @@ function NavBar({openDrawer}:{openDrawer:Function}) {
         </Flex>
         
         <Show above="md">
-            <Flex gap={2} fontSize={16} direction={"row"} alignItems={"center"} color={"gray.800"}>
+            <Flex gap={2} fontSize={16} direction={"row"} alignItems={"center"} _dark={{color:"gray.100"}} color={"gray.800"}>
                 
                 <Flex gap={8} px={6}>
                     <Link _hover={{color:kPrimaryColor,}} href="#about">About</Link>
