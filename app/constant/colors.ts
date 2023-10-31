@@ -1,0 +1,1 @@
+export const kPrimaryColor = "#068353";
